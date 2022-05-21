@@ -65,7 +65,7 @@ uploadVideo(){
       this.videoService.uploadVideo(file).subscribe(data=>{
         console.log("Video upload successfully!")
         console.log(data)
-        this.router.navigateByUrl("/save-video-details"+data.videoId);
+        this.router.navigateByUrl("/save-video-details/"+data.videoId);
 
       });
     })
