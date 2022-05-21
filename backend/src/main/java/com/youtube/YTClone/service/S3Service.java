@@ -20,9 +20,8 @@ public class S3Service implements FileService{
     public static final String BUCKET_NAME = "videoholder31";
     private final AmazonS3Client amazonS3Client;
 
-
     @Override
-    public String uploadVideo(MultipartFile multipartFile){
+    public String uploadFile(MultipartFile multipartFile){
         //upload file to AWS S3
 
         //Prepare a key
