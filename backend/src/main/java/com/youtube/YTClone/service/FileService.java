@@ -6,5 +6,5 @@ import org.springframework.web.multipart.MultipartFile;
 //then we can replace the server
 public interface FileService {
 
-    String uploadVideo(MultipartFile multipartFile);
+    String uploadFile(MultipartFile multipartFile);
 }
