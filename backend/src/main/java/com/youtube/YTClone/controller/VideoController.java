@@ -2,6 +2,7 @@ package com.youtube.YTClone.controller;
 
 import com.youtube.YTClone.dto.UploadVideoResponse;
 import com.youtube.YTClone.dto.VideoDto;
+import com.youtube.YTClone.model.Video;
 import com.youtube.YTClone.service.VideoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -37,7 +38,11 @@ public class VideoController {
         return videoService.editVideo(videoDto);
 
     }
-
+    @GetMapping("/{videoId}")
+    @ResponseStatus(HttpStatus.OK)
+    public VideoDto getVideoDetails(@PathVariable String videoId){
+      return  videoService.getVideoDetails(videoId);
+    }
 
 }
 
