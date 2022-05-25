@@ -34,4 +34,10 @@ export class VideoService {
   getVideo(videoId:string){
     return this.httpClient.get<VideoDto>("http://localhost:8080/api/videos/"+videoId);
   }
+
+  saveVideo(videoMetadata: VideoDto) :Observable<VideoDto>{
+
+   return this.httpClient.put<VideoDto>("http://localhost:8080/api/videos",videoMetadata)
+
+  }
 }
